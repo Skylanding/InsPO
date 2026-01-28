@@ -243,7 +243,19 @@ bash run_arena_hard.sh
 
 Follow the [FastChat LLM Judge](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge#mt-bench) instructions.
 
+## 📄 Citation
 
----
+If you use InSPO in your research, please cite:
+
+```bibtex
+@article{Li2025InSPOUI,
+  title={InSPO: Unlocking Intrinsic Self-Reflection for LLM Preference Optimization},
+  author={Yu Li and Tian Lan and Zhengling Qi},
+  journal={ArXiv},
+  year={2025},
+  volume={abs/2512.23126},
+  url={https://api.semanticscholar.org/CorpusID:284312139}
+}
+```
 
 **Happy Training with InSPO! 🚀**
