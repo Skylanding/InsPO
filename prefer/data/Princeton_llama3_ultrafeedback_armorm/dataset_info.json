@@ -1,0 +1,98 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "llama3-ultrafeedback-armorm",
+  "dataset_size": 911379700,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/princeton-nlp/llama3-ultrafeedback-armorm@9d189bae5856a823f3708d2c2bc4dbb43c90eb11/data/train-00000-of-00002.parquet": {
+      "num_bytes": 202874205,
+      "checksum": null
+    },
+    "hf://datasets/princeton-nlp/llama3-ultrafeedback-armorm@9d189bae5856a823f3708d2c2bc4dbb43c90eb11/data/train-00001-of-00002.parquet": {
+      "num_bytes": 203038385,
+      "checksum": null
+    },
+    "hf://datasets/princeton-nlp/llama3-ultrafeedback-armorm@9d189bae5856a823f3708d2c2bc4dbb43c90eb11/data/test-00000-of-00001.parquet": {
+      "num_bytes": 13202993,
+      "checksum": null
+    }
+  },
+  "download_size": 419115583,
+  "features": {
+    "prompt_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "all_generated_responses": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "all_rm_scores": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "chosen": [
+      {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "rejected": [
+      {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ]
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1330495283,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 882694582,
+      "num_examples": 59876,
+      "shard_lengths": [
+        34938,
+        24938
+      ],
+      "dataset_name": "llama3-ultrafeedback-armorm"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 28685118,
+      "num_examples": 1961,
+      "dataset_name": "llama3-ultrafeedback-armorm"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

@@ -1,0 +1,294 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            4zw0a17pf02muj1s9jpphyarshwyrpzc:
+                args:
+                    - --local_rank=0
+                    - --save_path
+                    - ./checkpoint/gemma2-9b-dpo-princeton-ultrafeedback-armorm
+                    - --save_steps
+                    - "1000"
+                    - --logging_steps
+                    - "20"
+                    - --eval_steps
+                    - "500"
+                    - --train_batch_size
+                    - "4"
+                    - --micro_train_batch_size
+                    - "1"
+                    - --pretrain
+                    - /home/ubuntu/basemodels/gemma/gemma2-9b-it
+                    - --ref_pretrain
+                    - /home/ubuntu/basemodels/gemma/gemma2-9b-it
+                    - --bf16
+                    - --max_epochs
+                    - "3"
+                    - --max_len
+                    - "256"
+                    - --zero_stage
+                    - "3"
+                    - --learning_rate
+                    - "5e-7"
+                    - --beta
+                    - "0.1"
+                    - --dataset
+                    - /home/ubuntu/Open/prefer/data/Princeton_llama3_ultrafeedback_armorm_dpo.jsonl
+                    - --chosen_key
+                    - chosen
+                    - --rejected_key
+                    - rejected
+                    - --prompt_key
+                    - prompt
+                    - --gradient_checkpointing
+                    - --flash_attn
+                    - --use_wandb
+                    - "true"
+                    - --wandb_project
+                    - princeton_gemma_dpo
+                    - --wandb_run_name
+                    - gemma2-9b-dpo-princeton-ultrafeedback-armorm
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "6014605721600"
+                        used: "1578981130240"
+                email: 2287757792@qq.com
+                executable: /home/ubuntu/miniconda3/envs/handbook/bin/python3.10
+                git:
+                    commit: a1e5065249b63292b26c107138915e2c754ff86c
+                    remote: https://github.com/OpenRLHF/OpenRLHF.git
+                gpu: NVIDIA RTX A6000
+                gpu_count: 4
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-44fbc386-a151-ab64-a2a9-bccfb01b60af
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-5668f8bd-914e-6886-5a70-2c5abd5df366
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-9d878580-2ded-482a-70df-8f1905f2033f
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-9454c03d-a1ac-1291-0f9f-d274886d4dce
+                host: ly
+                memory:
+                    total: "540850688000"
+                os: Linux-5.15.0-140-generic-x86_64-with-glibc2.35
+                program: -m openrlhf.cli.train_dpo
+                python: CPython 3.10.18
+                root: /home/ubuntu/Open/prefer
+                startedAt: "2025-09-14T03:35:35.781108Z"
+                writerId: 4zw0a17pf02muj1s9jpphyarshwyrpzc
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": eval/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": train/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": eval/*
+              "5": 2
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+                - 105
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+                - 105
+            "3":
+                - 2
+                - 7
+                - 13
+                - 16
+                - 66
+            "4": 3.10.18
+            "5": 0.21.0
+            "6": 4.44.2
+            "10":
+                - 20
+            "12": 0.21.0
+            "13": linux-x86_64
+adam_betas:
+    value:
+        - 0.9
+        - 0.95
+adam_offload:
+    value: false
+apply_chat_template:
+    value: false
+aux_loss_coef:
+    value: 0
+beta:
+    value: 0.1
+bf16:
+    value: true
+chosen_key:
+    value: chosen
+ckpt_path:
+    value: ./ckpt/checkpoints_dpo
+dataset:
+    value: /home/ubuntu/Open/prefer/data/Princeton_llama3_ultrafeedback_armorm_dpo.jsonl
+dataset_probs:
+    value: null
+dataset_split:
+    value: train
+deepcompile:
+    value: false
+disable_ds_ckpt:
+    value: false
+disable_fast_tokenizer:
+    value: false
+ds_tensor_parallel_size:
+    value: 1
+eval_dataset:
+    value: null
+eval_split:
+    value: test
+eval_steps:
+    value: 500
+flash_attn:
+    value: true
+full_determinism:
+    value: false
+grad_accum_dtype:
+    value: null
+gradient_checkpointing:
+    value: true
+gradient_checkpointing_use_reentrant:
+    value: false
+input_template:
+    value: null
+ipo:
+    value: false
+l2:
+    value: 0
+label_smoothing:
+    value: 0
+learning_rate:
+    value: 5e-07
+load_checkpoint:
+    value: false
+load_in_4bit:
+    value: false
+local_rank:
+    value: 0
+logging_steps:
+    value: 20
+lora_alpha:
+    value: 16
+lora_dropout:
+    value: 0
+lora_rank:
+    value: 0
+lr_scheduler:
+    value: cosine_with_min_lr
+lr_warmup_ratio:
+    value: 0.03
+max_ckpt_mem:
+    value: 1e+08
+max_ckpt_num:
+    value: 3
+max_epochs:
+    value: 3
+max_len:
+    value: 256
+max_norm:
+    value: 1
+max_samples:
+    value: 1000000
+micro_train_batch_size:
+    value: 1
+min_lr_ratio:
+    value: 0.1
+nll_loss_coef:
+    value: 0
+overlap_comm:
+    value: false
+packing_samples:
+    value: false
+pretrain:
+    value: /home/ubuntu/basemodels/gemma/gemma2-9b-it
+prompt_key:
+    value: prompt
+ref_offload:
+    value: false
+ref_pretrain:
+    value: /home/ubuntu/basemodels/gemma/gemma2-9b-it
+rejected_key:
+    value: rejected
+ring_attn_size:
+    value: 1
+ring_head_stride:
+    value: 1
+save_hf_ckpt:
+    value: false
+save_path:
+    value: ./checkpoint/gemma2-9b-dpo-princeton-ultrafeedback-armorm
+save_steps:
+    value: 1000
+seed:
+    value: 42
+target_modules:
+    value: all-linear
+train_batch_size:
+    value: 4
+use_ds_universal_ckpt:
+    value: false
+use_liger_kernel:
+    value: false
+use_ms:
+    value: false
+use_tensorboard:
+    value: null
+use_wandb:
+    value: "true"
+wandb_group:
+    value: null
+wandb_org:
+    value: null
+wandb_project:
+    value: princeton_gemma_dpo
+wandb_run_name:
+    value: gemma2-9b-dpo-princeton-ultrafeedback-armorm
+zero_stage:
+    value: 3
+zpg:
+    value: 1

@@ -1,0 +1,105 @@
+{
+  "os":  "Linux-5.15.0-140-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2025-09-11T21:17:52.982294Z",
+  "args":  [
+    "--local_rank=0",
+    "--save_path",
+    "./checkpoint/gemma2-9b-dpo-princeton-ultrafeedback-armorm",
+    "--save_steps",
+    "1000",
+    "--logging_steps",
+    "20",
+    "--eval_steps",
+    "500",
+    "--train_batch_size",
+    "4",
+    "--micro_train_batch_size",
+    "1",
+    "--pretrain",
+    "/home/ubuntu/basemodels/gemma/gemma2-9b-it",
+    "--ref_pretrain",
+    "/home/ubuntu/basemodels/gemma/gemma2-9b-it",
+    "--bf16",
+    "--max_epochs",
+    "3",
+    "--max_len",
+    "128",
+    "--zero_stage",
+    "3",
+    "--learning_rate",
+    "5e-7",
+    "--beta",
+    "0.1",
+    "--dataset",
+    "/home/ubuntu/Open/prefer/data/Princeton_llama3_ultrafeedback_armorm_dpo.jsonl",
+    "--chosen_key",
+    "chosen",
+    "--rejected_key",
+    "rejected",
+    "--prompt_key",
+    "prompt",
+    "--gradient_checkpointing",
+    "--flash_attn",
+    "--use_wandb",
+    "true",
+    "--wandb_project",
+    "princeton_gemma_dpo",
+    "--wandb_run_name",
+    "gemma2-9b-dpo-princeton-ultrafeedback-armorm"
+  ],
+  "program":  "-m openrlhf.cli.train_dpo",
+  "git":  {
+    "remote":  "https://github.com/OpenRLHF/OpenRLHF.git",
+    "commit":  "a1e5065249b63292b26c107138915e2c754ff86c"
+  },
+  "email":  "2287757792@qq.com",
+  "root":  "/home/ubuntu/Open/prefer",
+  "host":  "ly",
+  "executable":  "/home/ubuntu/miniconda3/envs/handbook/bin/python3.10",
+  "cpu_count":  64,
+  "cpu_count_logical":  128,
+  "gpu":  "NVIDIA RTX A6000",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "6062124040192",
+      "used":  "1276263661568"
+    }
+  },
+  "memory":  {
+    "total":  "540850688000"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-44fbc386-a151-ab64-a2a9-bccfb01b60af"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-5668f8bd-914e-6886-5a70-2c5abd5df366"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-9d878580-2ded-482a-70df-8f1905f2033f"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-9454c03d-a1ac-1291-0f9f-d274886d4dce"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "jwsye9h6aqepmjkxf18td16j4mirnelc"
+}
