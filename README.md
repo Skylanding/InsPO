@@ -1,5 +1,4 @@
 
-## 🚀 INSPO : Unlocking Intrinsic Self-Reflection for LLM Preference Optimization ##
 
 <h3 align="center">
 <b>INSPO : Unlocking Intrinsic Self-Reflection for LLM Preference Optimization</b>
