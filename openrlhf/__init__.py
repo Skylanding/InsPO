@@ -10,9 +10,6 @@ Usage with DeepSpeed:
     deepspeed --module openrlhf.cli.train_grpo --model_name_or_path <model_path>
 """
 
-__version__ = "0.1.0"
-__author__ = "OpenRLHF Team"
-__email__ = "openrlhf@example.com"
 
 # Core modules (import with error handling for missing dependencies)
 try:

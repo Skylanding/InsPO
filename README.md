@@ -85,9 +85,8 @@ We use the **UltraFeedback** dataset from [HuggingFace](https://huggingface.co/d
 
 **Dataset Source:**
 - **HuggingFace Dataset**: [`openbmb/UltraFeedback`](https://huggingface.co/datasets/openbmb/UltraFeedback)
-- **Paper**: [UltraFeedback: Boosting Language Models with High-quality Feedback](https://arxiv.org/abs/2310.01377)
 
-**How to Configure the Dataset:**
+**Configure the Dataset:**
 
 1. **Download UltraFeedback from HuggingFace:**
    ```bash
@@ -244,34 +243,6 @@ bash run_arena_hard.sh
 
 Follow the [FastChat LLM Judge](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge#mt-bench) instructions.
 
-## 📄 Citation
-
-If you use InSPO in your research, please cite:
-
-```bibtex
-@article{Li2025InSPOUI,
-  title={InSPO: Unlocking Intrinsic Self-Reflection for LLM Preference Optimization},
-  author={Yu Li and Tian Lan and Zhengling Qi},
-  journal={ArXiv},
-  year={2025},
-  volume={abs/2512.23126},
-  url={https://api.semanticscholar.org/CorpusID:284312139}
-}
-```
-
-## 🙏 Acknowledgements
-
-We are deeply thankful to the authors of the following works:
-
-- [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) - The base RLHF framework that this implementation builds upon
-- [DeepSpeed](https://github.com/microsoft/DeepSpeed) - Distributed training optimization
-- [Hugging Face Transformers](https://huggingface.co/transformers/) - Model implementations
-
-## 📚 Additional Resources
-
-- [OpenRLHF Documentation](https://openrlhf.readthedocs.io/)
-- [AlpacaEval](https://github.com/tatsu-lab/alpaca_eval)
-- [Arena-Hard](https://github.com/lm-sys/arena-hard-auto)
 
 ---
 
