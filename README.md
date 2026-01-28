@@ -1,8 +1,6 @@
 # 🚀 INSPO 🚀
 
-**Official implementation of INSPO**
-
-INSPO : Unlocking Intrinsic Self-Reflection for LLM Preference Optimization
+*INSPO : Unlocking Intrinsic Self-Reflection for LLM Preference Optimization*
 
 ## 🌼 Abstract
 
