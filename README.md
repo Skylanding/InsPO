@@ -135,21 +135,16 @@ The processed dataset follows the standard DPO format (JSONL):
 We evaluate models on three benchmarks located in `simposhell/eval/`:
 
 1. **AlpacaEval 2** (`alpacaeval2/`)
-   - 805 questions from 5 datasets
-   - Reports both raw win rate (WR) and length-controlled win rate (LC)
    - Configuration files: `alpacaeval2/configs/`
    - Templates: `alpacaeval2/templates/`
    - Use the [`alpaca-eval`](https://github.com/tatsu-lab/alpaca_eval) package
 
 2. **Arena-Hard** (`arenahard/`)
-   - 500 technical problem-solving queries
-   - Enhanced version of MT-Bench
    - Configuration files: `arenahard/configs/`
    - Templates: `arenahard/templates/`
    - Use the [`arena-hard-auto`](https://github.com/lm-sys/arena-hard-auto) package
 
 3. **MT-Bench** (`mt-bench/`)
-   - 80 questions across 8 categories
    - Reference answers: `mt-bench/gpt-4-1106-preview.jsonl`
    - Use the [`FastChat LLM Judge`](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge#mt-bench) package
 
@@ -157,7 +152,7 @@ We evaluate models on three benchmarks located in `simposhell/eval/`:
 
 ### Configuring Training Scripts
 
-Before training, you **must** configure the following parameters in the training scripts:
+Check the following parameters in the training scripts:
 
 **Required Parameters:**
 - `SFT_MODEL`: Path to your SFT model (e.g., `meta-llama/Meta-Llama-3-8B-Instruct`)
@@ -176,7 +171,7 @@ Before training, you **must** configure the following parameters in the training
 - `--max_len`: Maximum sequence length
 - `--max_epochs`: Number of training epochs
 
-**Example Configuration:**
+**Example**
 ```bash
 # Required
 SFT_MODEL="/path/to/your/model"
@@ -187,9 +182,9 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3
 TRAINER="simpo"  # Use SimPO trainer, or leave empty for standard DPO
 ```
 
-### Using Training Scripts
+### Training Scripts
 
-After configuring the parameters above, you can run the training scripts:
+You can run the training scripts:
 
 ```bash
 cd shell
@@ -214,10 +209,6 @@ cd simposhell/eval
 bash run_complete_evaluation.sh
 ```
 
-This script will:
-1. Generate model outputs for the evaluation datasets
-2. Run AlpacaEval 2 evaluation
-3. Generate evaluation results
 
 ### Manual Evaluation Steps
 
@@ -232,7 +223,7 @@ python generate_model_outputs.py \
     --output_dir results/your_model
 ```
 
-**2. Run AlpacaEval 2:**
+**2. Eval:**
 
 ```bash
 cd simposhell/eval
@@ -242,16 +233,11 @@ python alpaca_eval_official.py \
     --output_dir results/your_model/alpaca_eval_gpt4_turbo_fn
 ```
 
-**3. Run Arena-Hard:**
-
 ```bash
 cd simposhell/eval/arena-hard-auto
 bash run_arena_hard.sh
 ```
 
-**4. Run MT-Bench:**
-
-Follow the [FastChat LLM Judge](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge#mt-bench) instructions.
 
 ## 📄 Citation
 
