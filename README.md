@@ -30,7 +30,6 @@ InSPO serves as a plug-and-play enhancement for DPO-family algorithms, decouplin
 - **Intrinsic Self-Reflection**: Explicitly formalizes self-reflection by conditioning on both context and alternative response
 - **Invariance Guarantee**: Ensures optimal policy remains invariant to modeling choices
 - **Plug-and-Play Enhancement**: Works seamlessly with DPO-family algorithms without architectural changes
-- **Zero Inference Overhead**: Self-reflective mechanism is distilled during training, requiring no alternative response at inference
 
 ## 📁 Project Structure
 
@@ -268,5 +267,3 @@ If you use InSPO in your research, please cite:
   url={https://api.semanticscholar.org/CorpusID:284312139}
 }
 ```
-
-**Happy Training with InSPO! 🚀**
