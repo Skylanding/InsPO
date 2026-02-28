@@ -1,37 +1,31 @@
 #!/usr/bin/env python3
 """
-奖励函数工厂
-根据配置创建合适的奖励函数
+Reward function factory for creating appropriate reward functions based on configuration.
 """
 
 from typing import List, Any
 
-# 延迟导入以避免循环导入
 def _get_code_reward():
     try:
         from .grpo_trainer import CodePassrateReward
         return CodePassrateReward
     except ImportError:
-        # 如果相对导入失败，尝试绝对导入
         from openrlhf.trainer.grpo_trainer import CodePassrateReward
         return CodePassrateReward
 
 class RewardFactory:
-    """
-    奖励函数工厂类
-    根据配置创建合适的奖励函数
-    """
+    """Factory class for creating reward functions based on configuration."""
     
     @staticmethod
     def create_reward_functions(reward_mode: str) -> List[Any]:
         """
-        根据奖励模式创建奖励函数列表
+        Create reward function list based on reward mode.
         
         Args:
-            reward_mode: 奖励模式 ("math", "code", "hardware_verification")
+            reward_mode: Reward mode ("math", "code", "hardware_verification")
         
         Returns:
-            List: 奖励函数列表
+            List: List of reward functions
         """
         if reward_mode in ["math", "math_reward"]:
             return RewardFactory._create_math_reward()
@@ -43,13 +37,12 @@ class RewardFactory:
     
     @staticmethod
     def _create_math_reward() -> List[Any]:
-        """创建数学奖励函数"""
+        """Create math reward function."""
         try:
             from .math_reward_class import MathReward
             return [MathReward()]
         except ImportError:
             try:
-                # 尝试绝对导入
                 from openrlhf.trainer.math_reward_class import MathReward
                 return [MathReward()]
             except ImportError:
@@ -59,23 +52,18 @@ class RewardFactory:
     
     @staticmethod
     def _create_code_reward() -> List[Any]:
-        """创建代码奖励函数"""
+        """Create code reward function."""
         CodePassrateReward = _get_code_reward()
         return [CodePassrateReward()]
 
-# 测试函数
 if __name__ == "__main__":
-    # 测试不同奖励模式
     print("Testing RewardFactory:")
     
-    # 测试数学奖励
     math_rewards = RewardFactory.create_reward_functions("math")
     print(f"Math rewards: {len(math_rewards)} functions")
     
-    # 测试代码奖励
     code_rewards = RewardFactory.create_reward_functions("code")
     print(f"Code rewards: {len(code_rewards)} functions")
     
-    # 测试默认奖励
     default_rewards = RewardFactory.create_reward_functions("unknown")
     print(f"Default rewards: {len(default_rewards)} functions")
